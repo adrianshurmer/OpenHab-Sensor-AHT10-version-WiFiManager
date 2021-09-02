@@ -1,4 +1,4 @@
-/*
+/* ***********************************************************************************************
  * Version 4 - Sensor app for MQTT communication with OpenHab on running on Raspberry Pi
  * Version 4 adds WiFi management to previous version.
  * WiFi management enables the sensor to start in Access Point mode to allow connection to a local
