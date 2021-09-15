@@ -22,6 +22,7 @@
 #include <Adafruit_AHTX0.h>
 #include <ArduinoJson.h>
 
+ADC_MODE(ADC_VCC) // setup availability to read votage from ADC pin
 
 // Define some constants
 const int MEASUREMENT_PERIOD = 1000000*10; // Time period between measurements in seconds
@@ -223,9 +224,7 @@ void createJSON(){
 */
 float getVoltage(){
   // read the input on analog pin 0:
-  int sensorValue = analogRead(A0);
-  // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
-  float voltage = sensorValue * (4.0 / 1023.0);
+  float voltage = float voltage = (ESP.getVcc()/1000.00);
     // print out the value you read:
   Serial.println(voltage);
   return voltage;
